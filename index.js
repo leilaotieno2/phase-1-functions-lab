@@ -3,17 +3,23 @@ function distanceFromHqInBlocks(pickupLocation) {
   return Math.abs(pickupLocation - headquarters);
 }
 
+console.log(distanceFromHqInBlocks(pickupLocation));
+
 function distanceFromHqInFeet(pickupLocation) {
   const distanceInBlocks = distanceFromHqInBlocks(pickupLocation);
   const feetInBlock = 264;
   return distanceInBlocks * feetInBlock;
 }
 
+console.log(distanceFromHqInFeet(pickupLocation));
+
 function distanceTravelledInFeet(startBlock, endBlock) {
   const distanceInBlocks = Math.abs(endBlock - startBlock);
   const feetInBlock = 264;
   return distanceInBlocks * feetInBlock;
 }
+
+console.log(distanceTravelledInFeet(startBlock, endBlock));
 
 function calculatesFarePrice(start, destination) {
   const distance = distanceTravelledInFeet(start, destination);
@@ -28,13 +34,8 @@ function calculatesFarePrice(start, destination) {
   }
 }
 
+console.log(calculatesFarePrice(startBlock, endBlock));
+
 const pickupLocation = 50;
 const startBlock = 34;
 const endBlock = 38;
-
-console.log(distanceFromHqInBlocks(pickupLocation));
-console.log(distanceFromHqInFeet(pickupLocation));
-console.log(distanceTravelledInFeet(startBlock, endBlock));
-console.log(calculatesFarePrice(startBlock, endBlock));
-
-
